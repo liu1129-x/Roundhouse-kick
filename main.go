@@ -6,7 +6,9 @@ func main() {
 	bmi()
 }
 
+//bmi函数
 func bmi() {
+	//年龄
 	var age int
 	fmt.Print("请输入年龄:")
 	fmt.Scan(&age)
@@ -19,6 +21,7 @@ func bmi() {
 	fmt.Printf("请输入体重(kg):")
 	fmt.Scan(&d)
 
+	//计算公式
 	bmi := d / (hear * hear)
 	fmt.Printf("BMI值为:%.1f\n", bmi)
 
