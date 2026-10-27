@@ -1,4 +1,4 @@
-package main_test
+package main
 
 import "fmt"
 
@@ -6,7 +6,7 @@ func main() {
 	bmi()
 }
 
-//bmi函数
+// bmi函数
 func bmi() {
 	//年龄
 	var age int
