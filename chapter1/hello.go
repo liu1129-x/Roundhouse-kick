@@ -1,12 +1,7 @@
 package main
 
-import (
-	"fmt"
-	"os"
-)
+import "fmt"
 
 func main() {
-	if len(os.Args) > 1 {
-		fmt.Println("Hello World", os.Args[1])
-	}
+	fmt.Println("你好 世界！")
 }
