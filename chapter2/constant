@@ -1,4 +1,0 @@
-const (
-	Monday = 1
-	Tuesday = 2
-)

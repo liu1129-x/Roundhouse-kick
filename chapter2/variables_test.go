@@ -1,4 +1,4 @@
-package chapter2
+package chapter2_test
 
 import "testing"
 
@@ -20,4 +20,3 @@ func TestExchange(t *testing.T) {
 	a, b = b, a
 	t.Log(a, b)
 }
-
