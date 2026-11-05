@@ -2,13 +2,23 @@ package main
 
 import "fmt"
 
-func ZhengShu(x int, y int) int {
-	return (x + y) / 2
+func main() {
+	var math, chinese, english float64
+	fmt.Printf("请输入三科科目分数,用空格分开:")
+	fmt.Scanf("%f %f %f", &math, &chinese, &english)
+	fmt.Printf("总分为:%.1f\n", Sum(math, chinese, english))
 }
 
-func main() {
-	var a, b int
-	fmt.Printf("请输入两位整数,用空格分开:")
-	fmt.Scanf("%d %d", &a, &b)
-	fmt.Printf("值:%d\n", ZhengShu(a, b))
+// 总分
+func Sum(math ...float64) float64 {
+	sum := 0.0
+	for i := 0; i < len(math); i++ {
+		sum += math[i] //分数进行累加
+	}
+	return sum //返回和
 }
+
+//平均分
+//func Average(math, chinese language, enlish float64) float64 {
+
+//}
