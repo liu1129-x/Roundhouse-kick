@@ -1,18 +1,50 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	var math, chinese, english float64
-	fmt.Printf("请输入三科科目分数,用空格分开:")
+	Menu()
+}
+
+const handwriting = 5.0 //卷面分
+const serious = 6.0     //仔细分（认真分）
+
+// 输入菜单
+func Menu() {
+	var math, chinese, english float32
+
+	// var name string
+	// fmt.Printf("姓名:")
+	// fmt.Scanf(&name)
+
+	fmt.Printf("请输入数学、语文、英语分数(用空格分开):")
 	fmt.Scanf("%f %f %f", &math, &chinese, &english)
+
 	fmt.Printf("总分为:%.1f\n", Sum(math, chinese, english))
 	fmt.Printf("平均分为:%.1f\n", Average(math, chinese, english))
+
+	fmt.Println("卷面分:%f,", Totalscore(math, chinese, english))
+}
+
+// 净分值
+func Totalscore(math ...float32) float32 {
+	var sum float32 = 0.0
+
+	for i := 0; i < len(math); i++ {
+		sum += math[i] //分数进行累加
+	}
+
+	// if sum >  {
+
+	// }
+	return sum
 }
 
 // 总分
-func Sum(math ...float64) float64 {
-	sum := 0.0
+func Sum(math ...float32) float32 {
+	var sum float32 = 0.0
 
 	for i := 0; i < len(math); i++ {
 		sum += math[i] //分数进行累加
@@ -22,12 +54,12 @@ func Sum(math ...float64) float64 {
 }
 
 // 平均分
-func Average(math ...float64) float64 {
-	sum := 0.0
+func Average(math ...float32) float32 {
+	var sum float32 = 0.0
 
 	for i := 0; i < len(math); i++ {
 		sum += math[i]
 	}
 
-	return (float64(sum)) / (float64(len(math)))
+	return (float32(sum)) / (float32(len(math)))
 }
