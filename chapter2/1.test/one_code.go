@@ -9,10 +9,10 @@ func main() {
 func calculator() {
 	var x, y int  //定义x y两个整数变量
 	var op string //对应 + - * /
-	fmt.Print("请输入两个整数:")
+	fmt.Print("请输入表达式(例如:10 + 5):")
 	//判断返回值
 	n, err := fmt.Scanf("%d%s%d", &x, &op, &y)
-	// n值不等于3时返回错误信息
+	// 同于判断输入格式错误
 	if err != nil || n != 3 {
 		fmt.Println("输入格式错误!")
 		return
