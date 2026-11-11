@@ -25,7 +25,6 @@ func Menu() {
 	fmt.Printf("总分为:%.1f\n", Sum(math, chinese, english))
 	fmt.Printf("平均分为:%.1f\n", Average(math, chinese, english))
 
-	fmt.Println("卷面分:%f,", Totalscore(math, chinese, english))
 }
 
 // 净分值
@@ -36,9 +35,17 @@ func Totalscore(math ...float32) float32 {
 		sum += math[i] //分数进行累加
 	}
 
-	// if sum >  {
-
-	// }
+	if sum >= 270.0 {
+		fmt.Println("甲等")
+	} else if sum >= 240 {
+		fmt.Println("乙等")
+	} else if 240 > sum && sum >= 200 {
+		fmt.Println("丙等")
+	} else if 200 > sum && sum >= 180 {
+		fmt.Println("丁等")
+	} else {
+		fmt.Println("留级")
+	}
 	return sum
 }
 
