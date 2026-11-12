@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 
 	"example.com/greetings"
 )
@@ -18,7 +18,10 @@ func main() {
 
 	// fmt.Println(greetings.Tom(1))
 
-	x := 5
-	result := greetings.Tom(x)
-	fmt.Println(x, result)
+	// x := 5
+	// result := greetings.Tom(x, &x)
+	// fmt.Println(x, result)
+
+	// result :=
+	greetings.Peloep()
 }
