@@ -32,7 +32,7 @@ func subtract(a, b int) int {
 
 type Operation func(int, int) int
 
-func main() {
+func main1() {
 	fmt.Println("整数类型(Integer Type)")
 	var x int = 10
 	var y int64 = 100
